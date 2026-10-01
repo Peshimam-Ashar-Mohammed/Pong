@@ -39,8 +39,6 @@ public class Pong extends JPanel {
     private int speedLevel = 1;
 
     private static final double SPEED_MULTIPLIER = 1.15;
-    private static final double MAX_HORIZONTAL_SPEED = 10;
-    private static final double MAX_VERTICAL_SPEED = 7;
 
     public Pong() {
 
@@ -312,14 +310,12 @@ public class Pong extends JPanel {
             speedLevel++;
 
             ballVelocityX = Math.copySign(
-                    Math.min(Math.abs(ballVelocityX) * SPEED_MULTIPLIER,
-                            MAX_HORIZONTAL_SPEED),
+                    Math.abs(ballVelocityX) * SPEED_MULTIPLIER,
                     ballVelocityX
             );
 
             ballVelocityY = Math.copySign(
-                    Math.min(Math.abs(ballVelocityY) * SPEED_MULTIPLIER,
-                            MAX_VERTICAL_SPEED),
+                    Math.abs(ballVelocityY) * SPEED_MULTIPLIER,
                     ballVelocityY
             );
 
